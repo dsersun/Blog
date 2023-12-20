@@ -52,3 +52,13 @@ CREATE TABLE IF NOT EXISTS COMMENT (
     LIKE_COUNTER INT DEFAULT 0,
     DISLIKE_COUNTER INT DEFAULT 0
 );
+
+-- Create table for save tags
+CREATE TABLE post_tags (
+    post_id INT NOT NULL,
+    tag VARCHAR(255) NOT NULL,
+    CONSTRAINT fk_post
+    FOREIGN KEY(post_id)
+    REFERENCES post(post_id)
+    ON DELETE CASCADE
+);
