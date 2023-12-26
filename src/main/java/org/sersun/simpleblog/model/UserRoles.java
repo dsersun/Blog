@@ -1,5 +1,6 @@
 package org.sersun.simpleblog.model;
 
+import ch.qos.logback.core.net.SMTPAppenderBase;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
